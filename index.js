@@ -27,6 +27,10 @@ const __dirname = path.resolve();
 
 const app = express();
 app.use(cors());
+
+app.get('/', (req, res) => {
+  res.json({message: "working"});
+})
 // app.use(express.static(path.join(__dirname, '/client/dist')));
 
 // app.get('*', (req, res) => {
